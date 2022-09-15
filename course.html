@@ -157,7 +157,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/German Course.png" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="courseDescription.html">
                             <h4 class="text-white font-weight-medium">German</h4>
                             <span>Enroll Now</span>
                         </a>
@@ -248,7 +248,7 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">German A1</a>
+                            <a class="h5" href="courseDescription.html" onclick="saveGermanA1()">German A1</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -266,7 +266,7 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">German A2</a>
+                            <a class="h5" href="courseDescription.html" onclick="saveGermanA2()">German A2</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -284,7 +284,7 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">German B1</a>
+                            <a class="h5" href="courseDescription.html" onclick="saveGermanB1()">German B1</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -302,7 +302,7 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">German B2</a>
+                            <a class="h5" href="courseDescription.html" onclick="saveGermanB2()">German B2</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -444,6 +444,24 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function saveGermanA1(){
+            localStorage.setItem("course","German A1");
+        }
+
+        function saveGermanA2(){
+            localStorage.setItem("course","German A2");
+        }
+
+        function saveGermanB1(){
+            localStorage.setItem("course","German B1");
+        }
+
+        function saveGermanB2(){
+            localStorage.setItem("course","German B2");
+        }
+    </script>
 </body>
 
 </html>

@@ -109,8 +109,8 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link active">About</a>
-                            <a href="course.html" class="nav-item nav-link">Courses</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="course.html" class="nav-item nav-link active">Courses</a>
                             <a href="teacher.html" class="nav-item nav-link">Teachers</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
@@ -134,11 +134,11 @@
     <div class="container-fluid page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
-                <h3 class="display-4 text-white text-uppercase">About</h3>
+                <h3 id="courseHeading" class="display-4 text-white text-uppercase">Course Description</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">About</p>
+                    <p id="courseSubHeading" class="m-0 text-uppercase">Course Description</p>
                 </div>
             </div>
         </div>
@@ -151,15 +151,15 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded mb-4 mb-lg-0" src="img/about.jpg" alt="">
+                    <img id="courseImage" class="img-fluid rounded mb-4 mb-lg-0" src="img/about.jpg" alt="">
                 </div>
                 <div class="col-lg-7">
                     <div class="text-left mb-4">
-                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
-                        <h1>Innovative Way To Learn</h1>
+                        <h1 id="aboutTitle" class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h1>
+                        <h5 id="courseTitle">Innovative Way To Learn</h5>
                     </div>
-                    <p>Our Institute is located in Tirur and Kochi, providing ONLINE/OFFLINE language training. We are specialized in German language training for A1, A2, B1 & B2. Our Language training is very simple and student friendly. Our method is designed in a such a way that any students can grasp and excel in their course. Our unique training pattern were framed after years of practice and researches, which will boost the students confidence in learning languages. Our aim with German language training is to provide students with the best possible education and employment opportunities in Germany, Switzerland and Austria.The quality of German education is world-renowned for a reason. It's well-organized and designed to be highly accessible to all students allowing them to continue studying up to the university level regardless of a family's finances.</p>
-                    <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                    <p id="courseContent">Our Institute is located in Tirur and Kochi, providing ONLINE/OFFLINE language training. We are specialized in German language training for A1, A2, B1 & B2. Our Language training is very simple and student friendly. Our method is designed in a such a way that any students can grasp and excel in their course. Our unique training pattern were framed after years of practice and researches, which will boost the students confidence in learning languages. Our aim with German language training is to provide students with the best possible education and employment opportunities in Germany, Switzerland and Austria.The quality of German education is world-renowned for a reason. It's well-organized and designed to be highly accessible to all students allowing them to continue studying up to the university level regardless of a family's finances.</p>
+                    <p id="courseSubContent">Our Institute is located in Tirur and Kochi, providing ONLINE/OFFLINE language training. We are specialized in German language training for A1, A2, B1 & B2. Our Language training is very simple and student friendly. Our method is designed in a such a way that any students can grasp and excel in their course. Our unique training pattern were framed after years of practice and researches, which will boost the students confidence in learning languages. Our aim with German language training is to provide students with the best possible education and employment opportunities in Germany, Switzerland and Austria.The quality of German education is world-renowned for a reason. It's well-organized and designed to be highly accessible to all students allowing them to continue studying up to the university level regardless of a family's finances.</p>
                 </div>
             </div>
         </div>
@@ -217,7 +217,7 @@
         </div>
     </div>
     <!-- Registration End -->
-
+>
 
 
     <!-- Testimonial Start -->
@@ -349,6 +349,45 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+      var course =  localStorage.getItem("course");
+      var aboutTitle = document.getElementById("aboutTitle");
+      var courseTitle = document.getElementById("courseTitle");
+      var courseContent = document.getElementById("courseContent");
+      var courseSubContent = document.getElementById("courseSubContent");
+      var courseImage = document.getElementById("courseImage");
+
+      document.getElementById("courseHeading").innerText = course;
+      document.getElementById("courseSubHeading").innerText = course;
+      aboutTitle.innerText = "About "+course;
+
+      if(course === "German A1"){
+        courseTitle.innerText = "Lower Beginner";
+        courseContent.innerText = "At the A1 level, you should be able to understand simple German sentences and recognize basic words that describe yourself and the world around you. You can use familiar greetings and introduce yourself. You can also write simply, for example, filling out forms. You can understand fundamental German vocabulary in slow speech. We provide ONLINE/OFFLINE classes on Weekends & Weekdays.";
+        courseSubContent.innerText = " Duration- 1.5 Months";
+        courseImage.src = "./img/course-1.jpg";
+      }
+      if(course === "German A2"){
+        courseTitle.innerText = "Upper Beginner";
+        courseContent.innerText = "You can relate information about your job, your family, and your basic needs at the A2 level. You can understand practical materials like train schedules. You can also comprehend short written and spoken messages. We provide ONLINE/OFFLINE classes on Weekends & Weekdays.";
+        courseSubContent.innerText = " Duration- 1.5 Months";
+        courseImage.src = "./img/course-2.jpg";
+      }
+      if(course === "German B1"){
+        courseTitle.innerText = "Lower Intermediate";
+        courseContent.innerText = "At the B1 level, you can start to enjoy more German media, grasping the main ideas of TV or radio programs that have slow and clear narration. Your written and spoken expressions also become more sophisticated. We provide ONLINE/OFFLINE classes on Weekends & Weekdays.";
+        courseSubContent.innerText = " Duration- 2 Months";
+        courseImage.src = "./img/course-3.jpg";
+      }
+      if(course === "German B2"){
+        courseTitle.innerText = "Upper Intermediate";
+        courseContent.innerText = "Reaching the B2 level means that you can appreciate German media more fully, although you might still struggle with fast dialogue or idiomatic expressions. Your use of German is more nuanced at this level. The right words, expressions, and grammar come more easily to you, with much less hesitation than at lower levels. We provide ONLINE/OFFLINE classes on Weekends & Weekdays.";
+        courseSubContent.innerText = " Duration- 3 Months";
+        courseImage.src = "./img/course-4.jpg";
+      }
+
+    </script>
 </body>
 
 </html>
