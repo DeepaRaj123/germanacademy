@@ -157,7 +157,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/German Course.png" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="courseDescription.html">
+                        <a class="cat-overlay text-white text-decoration-none" onclick="saveGerman()" href="courseDescription.html">
                             <h4 class="text-white font-weight-medium">German</h4>
                             <span>Enroll Now</span>
                         </a>
@@ -460,6 +460,9 @@
 
         function saveGermanB2(){
             localStorage.setItem("course","German B2");
+        }
+        function saveGerman(){
+            localStorage.setItem("course","German");
         }
     </script>
 </body>
